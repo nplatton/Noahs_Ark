@@ -1,0 +1,24 @@
+{
+  "name": "client",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "start": "http-server",
+    "test": "jest --watchAll",
+    "dev": "concurrently \"watchify ./main.js -o bundle.js\" \"python -m http.server\"",
+    "coverage": "jest --coverage --silent"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^7.0.0",
+    "jest": "^27.5.1",
+    "jest-fetch-mock": "^3.0.3",
+    "watchify": "^4.0.0"
+  },
+  "dependencies": {
+    "http-server": "^14.1.0"
+  }
+}
