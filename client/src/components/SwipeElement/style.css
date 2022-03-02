@@ -1,0 +1,57 @@
+#outer-container {
+  /* Formatting */
+  top: 50px;
+  position: relative;
+  height: 400px;
+  width: 50%;
+  margin: auto;
+  border-radius: 50px;
+  border: black solid 4px;
+  /* Required */
+  overflow: hidden;
+}
+
+#swipe-container {
+  /* Formatting */
+  background-color: aquamarine;
+  /* Required */
+  width: 200%;
+  height: 100%;
+  display: flex;
+  overflow-y: hidden;
+  transform: translate(calc(var(--i, 0) / 2 * -100%));
+  transition: transform 2s cubic-bezier(0.175, 0.885, 0.32, 1.2);
+}
+
+#left-item {
+  /* Formatting */
+  background-color: powderblue;
+  /* Required */
+  width: 50%;
+  pointer-events: none;
+  /* Format Insides */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+#right-item {
+  /* Formatting */
+  background-color: floralwhite;
+  /* Required */
+  width: 50%;
+  pointer-events: none;
+  /* Format Insides */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.hide-scrollbar {
+  scrollbar-width: none; /* Firefox */
+}
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}

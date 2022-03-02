@@ -1,0 +1,12 @@
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 50%;
+  width: 70%;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+}
