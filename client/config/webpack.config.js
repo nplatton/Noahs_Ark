@@ -13,7 +13,7 @@ const config = {
   },
   mode: "development",
   resolve: {
-    modules: [path.resolve(ROOT_DIR, "node_modules"), "node_modules"],
+    modules: [path.resolve(ROOT_DIR), "node_modules"],
   },
   performance: {
     hints: false,
