@@ -21,13 +21,13 @@ const App = () => {
         <Route exact path="/">
           <Home token={token} setToken={setToken} />
         </Route>
-        <Route path="/about">
+        <Route exact path="/about">
           <About token={token} setToken={setToken} />
         </Route>
-        <Route path="/projects">
+        <Route exact path="/projects">
           <Projects token={token} setToken={setToken} />
         </Route>
-        <Route path="/auth">
+        <Route exact path="/auth">
           <Auth token={token} setToken={setToken} />
         </Route>
       </Switch>
