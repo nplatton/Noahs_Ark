@@ -1,0 +1,45 @@
+.about-tab {
+  height: calc(100% / 3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  pointer-events: none;
+}
+
+#about-inner {
+  /* COMMENT OUT POSITION TO SCROLL */
+  /* position: absolute; */
+  height: 300%;
+  display: flex;
+  flex-direction: column;
+  transform: translate(0, calc(var(--i, 0) / 3 * 100vh));
+}
+
+#about-outer {
+  display: relative;
+  height: 100vh;
+  margin: 1em 0;
+  overflow-y: scroll;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE */
+}
+.about-outer::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+img {
+  border-radius: 50%;
+  border: 5px solid rgb(31, 31, 31);
+  box-shadow: 2px 2px 10px 2px rgb(31, 31, 31);
+  margin: 2em 5em;
+}
+
+#climbing-aside {
+  width: 30%;
+  margin: 2em 5em;
+}
+
+.it-text {
+  font-size: 1.1em;
+}

@@ -1,12 +1,13 @@
-import React, { useState } from "react";
+import React from "react";
 
-import { SwipeElement } from "../../components";
+import "./style.css";
 
-export default () => {
+export default ({ token, setToken }) => {
   return (
     <>
-      {/* <h1>Welcome to Noah's Ark</h1> */}
-      <SwipeElement />
+      <div id="temp">
+        <h1>Home</h1>
+      </div>
     </>
   );
 };

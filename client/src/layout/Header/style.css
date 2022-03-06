@@ -1,0 +1,35 @@
+nav {
+  position: fixed;
+  /* position: sticky; */
+  top: 0px;
+  right: 0px;
+  left: 0px;
+  z-index: 1;
+  font-size: 1.5em;
+  /* background-color: rgb(16, 71, 16); */
+  background-color: rgb(31, 31, 31);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+a,
+a:visited {
+  color: ivory;
+  text-decoration: none;
+  padding: 0.5em 0.5em;
+  margin: 0 1em;
+  font-weight: bold;
+  border-radius: 10px;
+}
+
+.nav-div {
+  padding: 0.5em 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.active {
+  border: 2px solid ivory;
+}

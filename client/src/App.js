@@ -1,20 +1,36 @@
-import React from "react";
+import React, { useLayoutEffect, useState } from "react";
 import { Switch, Route } from "react-router-dom";
 
-import { Home } from "./pages";
-// import { Header, Footer } from "./layout";
+import { Home, About, Auth, Projects } from "./pages";
+import { Header, Footer } from "./layout";
 
 import "./App.css";
 
 const App = () => {
+  const [token, setToken] = useState();
+  useLayoutEffect(() => {
+    if (localStorage.getItem("token")) {
+      setToken(localStorage.getItem("token"));
+    }
+  }, [token]);
+
   return (
     <>
-      {/* <Header /> */}
-      {/* <Switch>
-        <Route exact path="/"> */}
-      <Home />
-      {/* </Route>
-      </Switch> */}
+      <Header token={token} setToken={setToken} />
+      <Switch>
+        <Route exact path="/">
+          <Home token={token} setToken={setToken} />
+        </Route>
+        <Route path="/about">
+          <About token={token} setToken={setToken} />
+        </Route>
+        <Route path="/projects">
+          <Projects token={token} setToken={setToken} />
+        </Route>
+        <Route path="/auth">
+          <Auth token={token} setToken={setToken} />
+        </Route>
+      </Switch>
       {/* <Footer /> */}
     </>
   );

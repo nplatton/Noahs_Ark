@@ -10,12 +10,13 @@ config.devServer = {
   port: 8080,
   hot: true,
   open: true,
-  host: "0.0.0.0",
+  host: "localhost",
+  public: "http://localhost:8080",
   watchContentBase: true,
   writeToDisk: true,
   liveReload: true,
 };
 
-// config.devTool = 'inline-source-map'
+// config.devTool = "inline-source-map";
 
 module.exports = config;

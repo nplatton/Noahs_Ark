@@ -4,7 +4,7 @@ import "./style.css";
 
 import { LoginForm, RegForm } from "..";
 
-export default () => {
+export default ({ setToken }) => {
   const [left, setLeft] = useState(true);
 
   function handleMouseDown(e) {
@@ -43,7 +43,7 @@ export default () => {
       >
         <div id="swipe-container">
           <div id="left-item">
-            <LoginForm />
+            <LoginForm setToken={setToken} />
             <p>Swipe right to register!</p>
           </div>
           <div id="right-item">{/* <RegForm /> */}</div>

@@ -10,3 +10,11 @@ form {
   display: flex;
   flex-direction: column;
 }
+
+input {
+  pointer-events: auto;
+}
+
+.wrong-pswrd {
+  border: 2px solid red;
+}
