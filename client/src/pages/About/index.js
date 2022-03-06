@@ -69,7 +69,7 @@ export default ({ token, setToken }) => {
                   ... I think my brother's chipped tooth may think otherwise.
                 </p>
                 <p>
-                  It wasn't all scrapping though. Like any brotherly
+                  Of course, it wasn't all scrapping. Like any brotherly
                   relationship there's plenty of competitiveness. In fact, I
                   would never tell him this but I give my brother a lot of
                   credit for how good I am at climbing. After all, he's the
@@ -153,11 +153,10 @@ export default ({ token, setToken }) => {
                 </p>
                 <p>I have always believed that</p>
                 <p className="text-center">
-                  <i>things in life will work out one way or another</i>
+                  <i>things in life will always work out well</i>
                 </p>
                 <p>
-                  and I'm lucky enough to say that my time at Warwick was no
-                  exception.
+                  and I'm happy to say that my time at Warwick was no exception.
                 </p>
               </aside>
               <img
@@ -188,13 +187,13 @@ export default ({ token, setToken }) => {
                   If I'm being completely honest, the only reason I want to earn
                   any money in life is so that I can explore all the incredible
                   places in the world. I reckon I could survive on a single
-                  cracker for every meal if it meant I could afford do this!
+                  cracker for every meal if it meant I could afford to do this!
                 </p>
                 <p>
                   I've started to gradually make my way through my list of
-                  targets, including Thailand, Singapore, and Dubai. It seems
-                  that I gravitate towards the warmer countries. It must be the
-                  Indian in me!
+                  targets, including Thailand, Singapore, Dubai, and Cuba. It
+                  seems that I gravitate towards the warmer countries. It must
+                  be the Indian in me!
                 </p>
                 <p>I'm not sure where I should go next... what do you think?</p>
                 <form>

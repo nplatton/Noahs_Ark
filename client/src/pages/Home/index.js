@@ -6,7 +6,7 @@ export default ({ token, setToken }) => {
   return (
     <>
       <div id="home-main">
-        <h1>Hi! Welcome to the Ark</h1>
+        <h1>Hi! Welcome to the Arkives</h1>
         <div id="home-circles">
           <a href="https://github.com/nplatton" target="_blank">
             <i className="fa fa-github fa-2x fa-border" id="github"></i>
