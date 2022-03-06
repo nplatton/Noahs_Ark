@@ -4,7 +4,7 @@ import { NavLink } from "react-router-dom";
 import "./style.css";
 
 export default ({ token, setToken }) => {
-  function handleClick() {
+  function handleLogout() {
     localStorage.clear();
     setToken(undefined);
   }
@@ -31,7 +31,7 @@ export default ({ token, setToken }) => {
           </>
         ) : (
           <>
-            <NavLink onClick={handleClick} to="/" activeClassName="active">
+            <NavLink onClick={handleLogout} to="/" activeClassName="active">
               Logout
             </NavLink>
           </>

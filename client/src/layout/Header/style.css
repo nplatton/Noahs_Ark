@@ -4,13 +4,15 @@ nav {
   top: 0px;
   right: 0px;
   left: 0px;
-  z-index: 1;
+  z-index: 2;
+  padding: 0.5em 0em;
   font-size: 1.5em;
   /* background-color: rgb(16, 71, 16); */
   background-color: rgb(31, 31, 31);
   display: flex;
   justify-content: space-around;
   align-items: center;
+  box-shadow: 2px 2px 5px rgb(31, 31, 31);
 }
 
 a,
