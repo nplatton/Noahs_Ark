@@ -29,7 +29,7 @@ export default ({ token, setToken }) => {
           className="nav-item"
           activeClassName="active"
         >
-          Projects
+          Arkives
         </NavLink>
       </div>
       <div className="nav-div">

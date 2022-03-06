@@ -51,7 +51,7 @@ export default ({ token, setToken }) => {
           <div className="about-tab">
             <div className="content">
               <aside className="about-aside">
-                <h1>Big teeth means big personality!</h1>
+                <h2>Big teeth means big personality!</h2>
                 <p></p>
               </aside>
               <img
@@ -77,7 +77,7 @@ export default ({ token, setToken }) => {
                 width="35%"
               />
               <aside className="about-aside">
-                <h1>Coding comes second...</h1>
+                <h2>Coding comes second...</h2>
                 <p>
                   I mean, I love coding but it doesn't hold a candle to my{" "}
                   <strong>true</strong> love. <br />
@@ -114,7 +114,7 @@ export default ({ token, setToken }) => {
             </div>
             <div className="content">
               <aside className="about-aside">
-                <h1>Coolest kid at Warwick uni</h1>
+                <h2>Coolest kid at Warwick uni</h2>
                 <p></p>
               </aside>
               <img
