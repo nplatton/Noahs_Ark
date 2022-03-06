@@ -89,6 +89,15 @@ img {
   font-size: 1.1em;
 }
 
+.text-center {
+  font-size: 1.05em;
+  text-align: center;
+}
+
+.quote {
+  text-align: center;
+}
+
 h2 {
   font-family: "Merienda", cursive;
 }

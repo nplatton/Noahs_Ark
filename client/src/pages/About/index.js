@@ -52,7 +52,29 @@ export default ({ token, setToken }) => {
             <div className="content">
               <aside className="about-aside">
                 <h2>Big teeth means big personality!</h2>
-                <p></p>
+                <p>
+                  I grew up Sheffield with my parents and 2-year-younger
+                  brother. I think it goes without saying that, being the older
+                  brother, I felt the incessant need to wind up my brother and
+                  constantly get sent to the naughty step. I find this quite
+                  funny since, when we were anywhere but at home, I was the best
+                  behaved kid you've ever seen. I guess I just didn't want
+                  strangers to see me cry when I was getting yelled at!
+                </p>
+                <p>Nowadays I'd say it was all in good fun ...</p>
+                <p className="quote">
+                  <i>" no harm done "</i>
+                </p>
+                <p>
+                  ... I think my brother's chipped tooth may think otherwise.
+                </p>
+                <p>
+                  It wasn't all scrapping though. Like any brotherly
+                  relationship there's plenty of competitiveness. In fact, I
+                  would never tell him this but I give my brother a lot of
+                  credit for how good I am at climbing. After all, he's the
+                  better looking sibling... I needed to best him at something!
+                </p>
               </aside>
               <img
                 id="childhood-img"
@@ -114,8 +136,29 @@ export default ({ token, setToken }) => {
             </div>
             <div className="content">
               <aside className="about-aside">
-                <h2>Coolest kid at Warwick uni</h2>
-                <p></p>
+                <h2>Coolest kid at Warwick University</h2>
+                <p>
+                  As a kid I was super shy. I hated trying new things and
+                  meeting new people. Honestly, this is primarily the reason I
+                  did maths at uni... stick with what you're good at I suppose.{" "}
+                  <br />I know it sounds like I'm regretful but that couldn't be
+                  farther from reality! I loved maths at university! It just
+                  took a while to adjust to the fact that my average grade
+                  naturally dropped from 90% to 65% &#128557;.
+                </p>
+                <p>
+                  <strong>But</strong> the toughness of my degree is what made
+                  me enjoy it so much, and I'm glad I did else I wouldn't have
+                  stayed for a masters, and I wouldn't have started coding!
+                </p>
+                <p>I have always believed that</p>
+                <p className="text-center">
+                  <i>things in life will work out one way or another</i>
+                </p>
+                <p>
+                  and I'm lucky enough to say that my time at Warwick was no
+                  exception.
+                </p>
               </aside>
               <img
                 id="uni-img"
@@ -140,7 +183,7 @@ export default ({ token, setToken }) => {
                 width="35%"
               />
               <aside className="about-aside">
-                <h2>With my big nose I blend right in</h2>
+                <h2>With my huge nose I blend right in</h2>
                 <p>
                   If I'm being completely honest, the only reason I want to earn
                   any money in life is so that I can explore all the incredible
