@@ -20,7 +20,7 @@ export default ({ token, setToken }) => {
         tab - 1
       );
       setTab((prev) => prev - 1);
-    } else if (e.keyCode == 40 && tab < 2) {
+    } else if (e.keyCode == 40 && tab < 3) {
       e.target.children[0].lastChild.firstChild.style.setProperty(
         "--i",
         tab + 1
@@ -38,7 +38,7 @@ export default ({ token, setToken }) => {
   }
 
   function handleScrollDown(e) {
-    if (tab < 2) {
+    if (tab < 3) {
       e.target.parentNode.parentNode.style.setProperty("--i", tab + 1);
       setTab((prev) => prev + 1);
     }
@@ -123,6 +123,41 @@ export default ({ token, setToken }) => {
                 alt="Photo of Noah at university"
                 width="35%"
               />
+            </div>
+            <div onMouseLeave={handleScrollDown} className="scroll-down">
+              Scroll Down
+            </div>
+          </div>
+          <div className="about-tab">
+            <div onMouseLeave={handleScrollUp} className="scroll-up">
+              Scroll Up
+            </div>
+            <div className="content">
+              <img
+                id="travelling-img"
+                src="../../images/travelling.jpg"
+                alt="Photo of Noah in Singapore"
+                width="35%"
+              />
+              <aside className="about-aside">
+                <h2>With my big nose I blend right in</h2>
+                <p>
+                  If I'm being completely honest, the only reason I want to earn
+                  any money in life is so that I can explore all the incredible
+                  places in the world. I reckon I could survive on a single
+                  cracker for every meal if it meant I could afford do this!
+                </p>
+                <p>
+                  I've started to gradually make my way through my list of
+                  targets, including Thailand, Singapore, and Dubai. It seems
+                  that I gravitate towards the warmer countries. It must be the
+                  Indian in me!
+                </p>
+                <p>I'm not sure where I should go next... what do you think?</p>
+                <form>
+                  {/* Create a form for visitors to make their selection */}
+                </form>
+              </aside>
             </div>
           </div>
         </div>
