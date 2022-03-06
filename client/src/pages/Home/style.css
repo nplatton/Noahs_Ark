@@ -1,7 +1,45 @@
-#temp {
-  height: 100vh;
-  width: 100vw;
-  padding-top: 5em;
-  font-size: 3em;
+#home-main {
+  width: 100%;
+  font-size: 2em;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  margin-top: 8rem;
+  font-family: "Merienda", cursive;
+}
+
+#home-circles {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2em;
+}
+
+.link-circle {
+  background-color: rgb(31, 31, 31);
+  border-radius: 50%;
+  width: 10%;
+}
+
+#main-circle {
+  background-color: rgb(31, 31, 31);
+  border-radius: 50%;
+  width: 25%;
+  margin-left: 0.5em;
+  margin-right: 0.5em;
+}
+
+#github {
+  color: rgb(31, 31, 31);
+  border-color: rgba(31, 31, 31, 0.7);
+  border-radius: 50%;
+  text-shadow: -1px 0 #000, 0 1px #000, 1px 0 #000, 0 -1px #000;
+}
+
+#linkedin {
+  color: rgb(31, 31, 31);
+  border-color: rgba(31, 31, 31, 0.7);
+  /* border-radius: 50%; */
+  text-shadow: -1px 0 #000, 0 1px #000, 1px 0 #000, 0 -1px #000;
 }

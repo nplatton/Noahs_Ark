@@ -17,12 +17,15 @@ nav {
 
 a,
 a:visited {
-  color: ivory;
   text-decoration: none;
   padding: 0.5em 0.5em;
   margin: 0 1em;
   font-weight: bold;
   border-radius: 10px;
+}
+
+.nav-item {
+  color: ivory;
 }
 
 .nav-div {

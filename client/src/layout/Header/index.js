@@ -12,26 +12,46 @@ export default ({ token, setToken }) => {
   return (
     <nav>
       <div className="nav-div">
-        <NavLink exact to="/" activeClassName="active">
+        <NavLink exact to="/" className="nav-item" activeClassName="active">
           Home
         </NavLink>
-        <NavLink exact to="/about" activeClassName="active">
+        <NavLink
+          exact
+          to="/about"
+          className="nav-item"
+          activeClassName="active"
+        >
           About
         </NavLink>
-        <NavLink exact to="/projects" activeClassName="active">
+        <NavLink
+          exact
+          to="/projects"
+          className="nav-item"
+          activeClassName="active"
+        >
           Projects
         </NavLink>
       </div>
       <div className="nav-div">
         {!token ? (
           <>
-            <NavLink exact to="/auth" activeClassName="active">
+            <NavLink
+              exact
+              to="/auth"
+              className="nav-item"
+              activeClassName="active"
+            >
               Login / Register
             </NavLink>
           </>
         ) : (
           <>
-            <NavLink onClick={handleLogout} to="/" activeClassName="active">
+            <NavLink
+              onClick={handleLogout}
+              to="/"
+              className="nav-item"
+              activeClassName="active"
+            >
               Logout
             </NavLink>
           </>
