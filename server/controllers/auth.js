@@ -15,12 +15,14 @@ async function login(req, res) {
     }
     // We need to verify password
     const userPswrd = await user.getPassword();
-    const authed = bcryptjs.compare(req.body.password, userPswrd);
+    const authed = await bcryptjs.compare(req.body.password, userPswrd);
     // Once verified log user in with JWT
     if (!!authed) {
       const payload = { username: user.username };
       // Sign token payload using secret from .env
-      const token = jwt.sign(payload, process.env.SECRET, { expiresIn: 1000 });
+      let token = await jwt.sign(payload, process.env.SECRET, {
+        expiresIn: 1000,
+      });
       if (!token) {
         throw new Error("Error in token generation");
       }
@@ -32,7 +34,7 @@ async function login(req, res) {
       throw new Error("User could not be authenticated");
     }
   } catch (err) {
-    res.status(401);
+    res.status(401).json({ success: false });
   }
 }
 

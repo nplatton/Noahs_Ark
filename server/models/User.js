@@ -14,7 +14,7 @@ class User {
       try {
         const userData = await db.query(
           `SELECT * FROM users
-        WHERE users.username=$1;`,
+        WHERE username=$1;`,
           [username]
         );
         if (!userData.rows.length) {
@@ -35,7 +35,7 @@ class User {
         const userData = await db.query(
           `
           SELECT * FROM users
-          WHERE users.email=$1;`,
+          WHERE email=$1;`,
           [email]
         );
         if (!userData.rows.length) {
