@@ -32,7 +32,7 @@ export default ({ token, setToken }) => {
           Projects
         </NavLink>
       </div>
-      <div className="nav-div">
+      {/* <div className="nav-div">
         {!token ? (
           <>
             <NavLink
@@ -56,7 +56,7 @@ export default ({ token, setToken }) => {
             </NavLink>
           </>
         )}
-      </div>
+      </div> */}
     </nav>
   );
 };

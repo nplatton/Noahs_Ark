@@ -27,9 +27,9 @@ const App = () => {
         <Route exact path="/projects">
           <Projects token={token} setToken={setToken} />
         </Route>
-        <Route exact path="/auth">
+        {/* <Route exact path="/auth">
           <Auth token={token} setToken={setToken} />
-        </Route>
+        </Route> */}
       </Switch>
       {/* <Footer /> */}
     </>
