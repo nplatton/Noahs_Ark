@@ -43,7 +43,7 @@ export default ({ setToken }) => {
       >
         <div id="swipe-container">
           <div id="left-item">
-            <LoginForm setToken={setToken} />
+            <LoginForm />
             <p>Swipe right to register!</p>
           </div>
           <div id="right-item">{/* <RegForm /> */}</div>

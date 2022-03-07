@@ -1,19 +1,17 @@
 #outer-container {
   /* Formatting */
-  top: 50px;
   position: relative;
   height: 400px;
   width: 50%;
-  margin: auto;
+  /* margin: 10em auto 0 auto; */
   border-radius: 50px;
-  border: black solid 4px;
+  border: rgb(48, 48, 48) solid 7px;
+  box-shadow: 2px 2px 10px 2px rgb(31, 31, 31);
   /* Required */
   overflow: hidden;
 }
 
 #swipe-container {
-  /* Formatting */
-  background-color: aquamarine;
   /* Required */
   width: 200%;
   height: 100%;
@@ -25,7 +23,7 @@
 
 #left-item {
   /* Formatting */
-  background-color: powderblue;
+  background-color: ivory;
   /* Required */
   width: 50%;
   pointer-events: none;
@@ -38,7 +36,7 @@
 
 #right-item {
   /* Formatting */
-  background-color: floralwhite;
+  background-color: ivory;
   /* Required */
   width: 50%;
   pointer-events: none;
