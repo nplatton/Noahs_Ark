@@ -177,7 +177,7 @@ export default ({ token, setToken }) => {
             <div className="content">
               <img
                 id="travelling-img"
-                src="../../images/travelling.jpg"
+                src="../../images/travelling_2.jpg"
                 alt="Photo of Noah in Singapore"
                 width="35%"
               />

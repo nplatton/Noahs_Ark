@@ -16,12 +16,6 @@
   margin-bottom: 2em;
 }
 
-.link-circle {
-  background-color: rgb(31, 31, 31);
-  border-radius: 50%;
-  width: 10%;
-}
-
 #main-circle {
   background-color: rgb(31, 31, 31);
   border-radius: 50%;
@@ -35,11 +29,20 @@
   border-color: rgba(31, 31, 31, 0.7);
   border-radius: 50%;
   text-shadow: -1px 0 #000, 0 1px #000, 1px 0 #000, 0 -1px #000;
+  transition: border-color 0.5s ease-in-out;
+}
+
+#github:hover {
+  border-color: purple;
 }
 
 #linkedin {
   color: rgb(31, 31, 31);
   border-color: rgba(31, 31, 31, 0.7);
-  /* border-radius: 50%; */
   text-shadow: -1px 0 #000, 0 1px #000, 1px 0 #000, 0 -1px #000;
+  transition: border-color 0.5s ease-in-out;
+}
+
+#linkedin:hover {
+  border-color: #0e76a8;
 }
