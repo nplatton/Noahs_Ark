@@ -5,3 +5,7 @@ body {
   overflow: hidden;
   font-family: "David Libre", serif;
 }
+
+img {
+  text-align: center;
+}
