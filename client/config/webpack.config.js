@@ -1,5 +1,6 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const Dotenv = require("dotenv-webpack");
 
 const ROOT_DIR = path.join(__dirname, "../");
 const PUB_DIR = path.join(ROOT_DIR, "public");
@@ -22,6 +23,7 @@ const config = {
     new HtmlWebpackPlugin({
       template: path.join(PUB_DIR, "index.html"),
     }),
+    new Dotenv(),
   ],
   module: {
     rules: [

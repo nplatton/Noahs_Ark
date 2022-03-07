@@ -6,7 +6,7 @@ import "./style.css";
 export default ({ token, setToken }) => {
   function handleLogout() {
     localStorage.clear();
-    setToken(undefined);
+    setToken(null);
   }
 
   return (
