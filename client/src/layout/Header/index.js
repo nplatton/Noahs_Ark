@@ -34,6 +34,18 @@ export default () => {
         >
           Projects
         </NavLink>
+        {user ? (
+          <NavLink
+            exact
+            to="/secret"
+            className="nav-item"
+            activeClassName="active"
+          >
+            Secret
+          </NavLink>
+        ) : (
+          <></>
+        )}
       </div>
       <div className="nav-div">
         {!user ? (
@@ -49,12 +61,7 @@ export default () => {
           </>
         ) : (
           <>
-            <NavLink
-              onClick={handleLogout}
-              to="/"
-              className="nav-item"
-              activeClassName="active"
-            >
+            <NavLink onClick={handleLogout} to="/" className="nav-item">
               Logout
             </NavLink>
           </>

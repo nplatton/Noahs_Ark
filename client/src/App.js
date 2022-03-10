@@ -1,12 +1,16 @@
 import React from "react";
 import { Switch, Route } from "react-router-dom";
 
-import { Home, About, Auth, Projects } from "./pages";
+import { Home, About, Auth, Projects, Secret, NotFound } from "./pages";
 import { Header, Footer } from "./layout";
 
 import "./App.css";
+import { useAuthContext } from "./contexts/Auth";
+import { Redirect } from "react-router-dom";
 
 const App = () => {
+  const { user } = useAuthContext();
+
   return (
     <>
       <Header />
@@ -14,14 +18,26 @@ const App = () => {
         <Route exact path="/">
           <Home />
         </Route>
-        <Route exact path="/about">
+        <Route path="/about">
           <About />
         </Route>
-        <Route exact path="/projects">
+        <Route path="/projects">
           <Projects />
         </Route>
-        <Route exact path="/auth">
+        <Route path="/auth">
           <Auth />
+        </Route>
+        {user ? (
+          <Route path="/secret">
+            <Secret />
+          </Route>
+        ) : (
+          <Redirect from="/secret" to="/">
+            <Home />
+          </Redirect>
+        )}
+        <Route>
+          <NotFound />
         </Route>
       </Switch>
       {/* <Footer /> */}

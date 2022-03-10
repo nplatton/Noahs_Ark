@@ -44,7 +44,7 @@ export default () => {
         <div id="swipe-container">
           <div id="left-item">
             <LoginForm />
-            <p>Swipe right to register!</p>
+            <p>Swipe to the right to register!</p>
           </div>
           <div id="right-item">{/* <RegForm /> */}</div>
         </div>
