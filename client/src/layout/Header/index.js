@@ -1,11 +1,15 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { NavLink } from "react-router-dom";
+import { useAuthContext } from "../../contexts/Auth";
 
 import "./style.css";
 
 export default () => {
+  const { user, setUser } = useAuthContext();
+
   function handleLogout() {
     localStorage.clear();
+    setUser(null);
   }
 
   return (
@@ -32,7 +36,7 @@ export default () => {
         </NavLink>
       </div>
       <div className="nav-div">
-        {!token ? (
+        {!user ? (
           <>
             <NavLink
               exact

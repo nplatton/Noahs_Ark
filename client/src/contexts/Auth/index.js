@@ -87,7 +87,7 @@ export const AuthProvider = ({ children }) => {
     setUser(null);
   };
 
-  const auth = { login, user, logout };
+  const auth = { login, user, logout, setUser };
 
   return (
     <>

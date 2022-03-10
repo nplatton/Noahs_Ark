@@ -4,7 +4,7 @@ import "./style.css";
 
 import { LoginForm, RegForm } from "..";
 
-export default ({ setToken }) => {
+export default () => {
   const [left, setLeft] = useState(true);
 
   function handleMouseDown(e) {
