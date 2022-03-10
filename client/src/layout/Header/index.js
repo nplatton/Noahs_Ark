@@ -3,10 +3,9 @@ import { NavLink } from "react-router-dom";
 
 import "./style.css";
 
-export default ({ token, setToken }) => {
+export default () => {
   function handleLogout() {
     localStorage.clear();
-    setToken(null);
   }
 
   return (
