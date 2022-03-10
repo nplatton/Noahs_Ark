@@ -9,19 +9,19 @@ import "./App.css";
 const App = () => {
   return (
     <>
-      <Header token={token} setToken={setToken} />
+      <Header />
       <Switch>
         <Route exact path="/">
-          <Home token={token} setToken={setToken} />
+          <Home />
         </Route>
         <Route exact path="/about">
-          <About token={token} setToken={setToken} />
+          <About />
         </Route>
         <Route exact path="/projects">
-          <Projects token={token} setToken={setToken} />
+          <Projects />
         </Route>
         <Route exact path="/auth">
-          <Auth token={token} setToken={setToken} />
+          <Auth />
         </Route>
       </Switch>
       {/* <Footer /> */}
