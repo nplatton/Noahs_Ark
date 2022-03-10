@@ -26,7 +26,7 @@ const config = {
     new HtmlWebpackPlugin({
       filename: "index.html",
       template: "public/index.html",
-      favicon: "src/images/favicon.ico",
+      favicon: "src/images/favicon.png",
     }),
     new Dotenv(),
   ],
