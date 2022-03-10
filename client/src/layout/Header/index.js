@@ -32,7 +32,7 @@ export default () => {
           className="nav-item"
           activeClassName="active"
         >
-          Projects
+          Arkives
         </NavLink>
         {user ? (
           <NavLink
