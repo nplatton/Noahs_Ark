@@ -1,8 +1,9 @@
 import "regenerator-runtime/runtime";
 
 import React, { useState } from "react";
-import axios from "axios";
+import { useHistory } from "react-router-dom";
 
+import axios from "axios";
 import jwt_decode from "jwt-decode";
 
 import { useAuthContext } from "../../contexts/Auth";
@@ -10,6 +11,7 @@ import { useAuthContext } from "../../contexts/Auth";
 import "./style.css";
 
 export default () => {
+  const history = useHistory();
   const { login } = useAuthContext();
 
   const [formData, setFormData] = useState({
@@ -30,6 +32,7 @@ export default () => {
     try {
       setLoading(true);
       await login(formData);
+      history.push("/secret");
     } catch (err) {
       setLoading(false);
       setErr(err);
