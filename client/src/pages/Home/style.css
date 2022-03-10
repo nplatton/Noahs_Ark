@@ -13,12 +13,13 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 2em;
+  margin-top: 1em;
+  margin-bottom: 0.5em;
 }
 
 #main-circle {
   border-radius: 50%;
-  width: 25%;
+  width: 15%;
   margin-left: 0.5em;
   margin-right: 0.5em;
   font-size: 1rem;
@@ -28,8 +29,7 @@
   color: rgb(31, 31, 31);
   border-color: rgba(31, 31, 31, 0.7);
   border-radius: 50%;
-  text-shadow: -1px 0 #000, 0 1px #000, 1px 0 #000, 0 -1px #000;
-  transition: border-color 0.5s ease-in-out;
+  transition: border-color 0.4s ease-in-out;
 }
 
 #github:hover {
@@ -39,10 +39,62 @@
 #linkedin {
   color: rgb(31, 31, 31);
   border-color: rgba(31, 31, 31, 0.7);
-  text-shadow: -1px 0 #000, 0 1px #000, 1px 0 #000, 0 -1px #000;
-  transition: border-color 0.5s ease-in-out;
+  transition: border-color 0.4s ease-in-out;
 }
 
 #linkedin:hover {
   border-color: #0e76a8;
+}
+
+#intro-text {
+  text-align: center;
+  font-weight: bold;
+  font-family: "David Libre", serif;
+  margin-bottom: 5em;
+}
+
+#technologies {
+  position: absolute;
+  right: 0;
+  left: 0;
+  bottom: 2em;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.tech-item {
+  border: none;
+  box-shadow: none;
+}
+
+#html5:hover {
+  color: #e34c26;
+  transition: color 0.3s ease-in-out;
+}
+
+#css3:hover {
+  color: #2965f1;
+  transition: color 0.3s ease-in-out;
+}
+
+#nodejs:hover {
+  color: #3c873a;
+  transition: color 0.3s ease-in-out;
+}
+
+#react:hover {
+  color: #61dbfb;
+  transition: color 0.3s ease-in-out;
+}
+
+#python:hover {
+  color: #4584b6;
+  /* color: #ffde57; */
+  transition: color 0.3s ease-in-out;
+}
+
+#docker:hover {
+  color: #0db7ed;
+  transition: color 0.3s ease-in-out;
 }

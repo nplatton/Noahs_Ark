@@ -1,78 +1,73 @@
 import "regenerator-runtime/runtime";
 
 import React, { useState } from "react";
-import axios from "axios";
+import { useHistory } from "react-router-dom";
 
+import axios from "axios";
 import jwt_decode from "jwt-decode";
+
+import { useAuthContext } from "../../contexts/Auth";
 
 import "./style.css";
 
-export default ({ setToken }) => {
+export default () => {
+  const history = useHistory();
+  const { login } = useAuthContext();
+
+  const [formData, setFormData] = useState({
+    username: "",
+    password: "",
+  });
+  const [err, setErr] = useState();
+  const [loading, setLoading] = useState(false);
+
+  const handleInput = (e) => {
+    setFormData((prev) => ({ ...prev, [e.target.name]: e.target.value }));
+  };
+
+  const incompleteForm = () => Object.values(formData).some((value) => !value);
+
   const handleSubmission = async (e) => {
     e.preventDefault();
     try {
-      const userData = {
-        username: e.target["login-name"].value,
-        password: e.target["login-pswrd"].value,
-      };
-      const options = {
-        headers: {
-          "Content-Type": "application/json",
-        },
-      };
-
-      const { data } = await axios.post(
-        "http://localhost:3000/auth/login",
-        userData,
-        options
-      );
-
-      if (data.success) {
-        console.log("Success!");
-      } else {
-        console.log("Failure");
-        incorrectPassword(e);
-      }
-      setToken(data.token);
-      loginUser(data.token);
+      setLoading(true);
+      await login(formData);
+      history.push("/secret");
     } catch (err) {
-      console.warn(err);
+      setLoading(false);
+      setErr(err);
     }
-  };
-
-  const loginUser = (token) => {
-    const user = jwt_decode(token);
-    localStorage.setItem("token", token);
-    localStorage.setItem("username", user.username);
-  };
-
-  const incorrectPassword = (e) => {
-    e.target.childNodes[1].classList.add("wrong-pswrd");
   };
 
   return (
     <>
       <form onSubmit={handleSubmission}>
         <div className="field">
-          <label htmlFor="login-name">Username/email</label>
+          <label htmlFor="username">Username/email</label>
           <input
+            onChange={handleInput}
             type="text"
             id="login-name"
-            name="login-name"
-            placeholder="Enter your username or email..."
-          ></input>
+            name="username"
+            placeholder="Enter username or email..."
+            value={formData.username}
+          />
         </div>
         <div className="field">
-          <label htmlFor="login-pswrd">Password</label>
+          <label htmlFor="password">Password</label>
           <input
+            onChange={handleInput}
             type="password"
             id="login-pswrd"
-            name="login-pswrd"
-            placeholder="Enter your password..."
-          ></input>
+            name="password"
+            placeholder="Enter password..."
+            value={formData.password}
+          />
         </div>
-        <input type="submit" value="Submit"></input>
+        <input type="submit" value="Login" disabled={incompleteForm()} />
       </form>
+      {err && <div id="error">{err}</div>}
+      {loading && <div id="loading">{loading}</div>}
     </>
   );
 };

@@ -1,6 +1,6 @@
 import { screen } from "@testing-library/react";
 
-import { SwipeElement } from "../components";
+import { default as SwipeElement } from ".";
 
 describe("SwipeElement", () => {
   beforeEach(() => {
@@ -8,9 +8,9 @@ describe("SwipeElement", () => {
   });
 
   test("it swipes to the right", () => {
-    const swiper = screen.getByRole("region", { id: "outer-container" });
+    const swiper = screen.getByRole("region");
     // const swiper = screen.getByTestId("swipe-elt");
-    fireEvent.mouseDown(swiper, { clientX: 400 });
+    console.log(fireEvent.mouseDown(swiper, { clientX: 400 }));
     fireEvent.mouseUp(swiper, { clientX: 350 });
     expect(swiper).toBe(1);
   });
