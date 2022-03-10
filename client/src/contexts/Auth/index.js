@@ -13,9 +13,9 @@ export const AuthProvider = ({ children }) => {
   function getCurrentUser() {
     const token = localStorage.getItem("token");
     if (token) {
-      let user = jwt_decode(token);
+      return jwt_decode(token).username;
     }
-    return user;
+    return null;
   }
 
   const login = (userData) => {
@@ -40,7 +40,7 @@ export const AuthProvider = ({ children }) => {
           // incorrectPassword(e);
         }
 
-        loginUser(data);
+        loginUser(data.token);
         res("Login successful");
       } catch (err) {
         rej(`Login error: ${err}`);
@@ -48,10 +48,10 @@ export const AuthProvider = ({ children }) => {
     });
   };
 
-  const loginUser = (userData) => {
+  const loginUser = (token) => {
     localStorage.setItem("token", token);
     const user = jwt_decode(token);
-    setUser(user);
+    setUser(user.username);
   };
 
   // const register = (userData) => {
