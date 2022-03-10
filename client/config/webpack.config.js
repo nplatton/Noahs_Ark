@@ -23,6 +23,11 @@ const config = {
     new HtmlWebpackPlugin({
       template: path.join(PUB_DIR, "index.html"),
     }),
+    new HtmlWebpackPlugin({
+      filename: "index.html",
+      template: "public/index.html",
+      favicon: "src/images/favicon.ico",
+    }),
     new Dotenv(),
   ],
   module: {

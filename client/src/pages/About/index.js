@@ -136,7 +136,7 @@ export default ({ token, setToken }) => {
             </div>
             <div className="content">
               <aside className="about-aside">
-                <h2>Coolest kid at Warwick University</h2>
+                <h2>Enough maths for a lifetime</h2>
                 <p>
                   As a kid I was super shy. I hated trying new things and
                   meeting new people. Honestly, this is primarily the reason I

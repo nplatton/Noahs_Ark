@@ -38,3 +38,16 @@ Have a "login" tab on the navbar
 Once logged in it redirects to the homepage
 Home page has greeting to logged in user
 The "login" tab turns into a "logout" button
+
+## Home Page
+
+- [] Add list of known technologies
+  - HTML
+  - CSS
+  - JavaScript / NodeJS
+  - React
+  - Redux
+  - Webpack
+  - Docker
+  - PostgreSQL
+  - MongoDB

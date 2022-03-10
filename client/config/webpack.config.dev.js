@@ -17,6 +17,6 @@ config.devServer = {
   liveReload: true,
 };
 
-// config.devTool = "inline-source-map";
+// config.devtool = "inline-source-map";
 
 module.exports = config;

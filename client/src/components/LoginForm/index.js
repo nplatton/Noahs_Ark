@@ -31,7 +31,12 @@ export default ({ setToken }) => {
     e.preventDefault();
     try {
       setLoading(true);
+      console.log(formData);
       await login(formData);
+      setFormData({
+        username: "",
+        password: "",
+      });
       history.push("/");
     } catch (err) {
       setLoading(false);
@@ -49,7 +54,7 @@ export default ({ setToken }) => {
             type="text"
             id="login-name"
             name="username"
-            placeholder="Enter your username or email..."
+            placeholder="Enter username or email..."
             value={formData.username}
           />
         </div>
@@ -60,7 +65,7 @@ export default ({ setToken }) => {
             type="password"
             id="login-pswrd"
             name="password"
-            placeholder="Enter your password..."
+            placeholder="Enter password..."
             value={formData.password}
           />
         </div>

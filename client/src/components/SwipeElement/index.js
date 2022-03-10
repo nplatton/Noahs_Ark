@@ -35,7 +35,7 @@ export default ({ setToken }) => {
     <>
       <div
         role="region"
-        aria-label="swiper"
+        // aria-label="swiper"
         onMouseDown={handleMouseDown}
         onMouseUp={handleSwipe}
         id="outer-container"
