@@ -1,4 +1,4 @@
-import React, { useLayoutEffect, useState } from "react";
+import React from "react";
 import { Switch, Route } from "react-router-dom";
 
 import { Home, About, Auth, Projects } from "./pages";
@@ -7,13 +7,6 @@ import { Header, Footer } from "./layout";
 import "./App.css";
 
 const App = () => {
-  const [token, setToken] = useState();
-  useLayoutEffect(() => {
-    if (localStorage.getItem("token")) {
-      setToken(localStorage.getItem("token"));
-    }
-  }, [token]);
-
   return (
     <>
       <Header token={token} setToken={setToken} />
