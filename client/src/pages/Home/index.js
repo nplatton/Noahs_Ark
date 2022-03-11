@@ -1,14 +1,24 @@
 import React from "react";
+import Helmet from "react-helmet";
 
 import "./style.css";
 
 export default () => {
   return (
     <>
+      <Helmet>
+        <style>
+          {`
+            body {
+              overflow-x: hidden;
+            }
+          `}
+        </style>
+      </Helmet>
       <div id="home-main">
         {/* <h1>Hi! Welcome to the Arkives</h1> */}
         <div id="home-circles">
-          <a href="https://github.com/nplatton" target="_blank">
+          <a role="link" href="https://github.com/nplatton" target="_blank">
             <i className="fab fa-github fa-2x fa-border" id="github"></i>
           </a>
           <img
@@ -18,6 +28,7 @@ export default () => {
             width="20%"
           />
           <a
+            role="link"
             href="https://www.linkedin.com/in/noah-platton-4568bb1a2/"
             target="_blank"
           >
@@ -27,7 +38,7 @@ export default () => {
         <p id="intro-text">
           Hi, I'm Noah and I'm a full stack developer and maths graduate.
         </p>
-        <div id="technologies">
+        <div data-testid="tech-region" id="technologies">
           {/* <div className="tech-sct"> */}
           <i className="fab fa-html5 fa-3x" id="html5"></i>
           <i className="fab fa-css3 fa-3x" id="css3"></i>
