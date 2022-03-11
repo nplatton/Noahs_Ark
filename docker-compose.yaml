@@ -1,0 +1,16 @@
+version: "3"
+services:
+  api:
+    image: node:latest
+    working_dir: /code
+    volumes:
+      - type: bind
+        source: ./server
+        target: /code
+
+  db:
+    image: postgres:latest
+    environment:
+      - POSTGRES_USER=noah
+    volumes:
+      - "./db/migrations:/docker-entrypoint-initdb.d/:ro"

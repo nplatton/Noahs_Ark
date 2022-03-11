@@ -1,0 +1,41 @@
+nav {
+  position: fixed;
+  /* position: sticky; */
+  top: 0px;
+  right: 0px;
+  left: 0px;
+  z-index: 2;
+  padding: 0.5em 0em;
+  font-size: 1.5em;
+  /* background-color: rgb(16, 71, 16); */
+  background-color: rgb(31, 31, 31);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  box-shadow: 2px 2px 5px rgb(31, 31, 31);
+  font-family: "Sansita Swashed", cursive;
+}
+
+a,
+a:visited {
+  text-decoration: none;
+  padding: 0.5em 0.5em;
+  margin: 0 1em;
+  font-weight: bold;
+  border-radius: 10px;
+}
+
+.nav-item {
+  color: ivory;
+}
+
+.nav-div {
+  padding: 0.5em 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.active {
+  border: 2px solid ivory;
+}
