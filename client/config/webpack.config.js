@@ -1,6 +1,7 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const Dotenv = require("dotenv-webpack");
+const CopyWebpackPlugin = require("copy-webpack-plugin");
 
 const ROOT_DIR = path.join(__dirname, "../");
 const PUB_DIR = path.join(ROOT_DIR, "public");
@@ -26,9 +27,12 @@ const config = {
     new HtmlWebpackPlugin({
       filename: "index.html",
       template: "public/index.html",
-      favicon: "src/images/favicon.ico",
+      favicon: "src/images/favicon.png",
     }),
     new Dotenv(),
+    new CopyWebpackPlugin({
+      patterns: [{ from: "src/images", to: "images" }],
+    }),
   ],
   module: {
     rules: [
