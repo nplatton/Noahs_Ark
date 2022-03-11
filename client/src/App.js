@@ -24,17 +24,19 @@ const App = () => {
         <Route path="/projects">
           <Projects />
         </Route>
-        <Route path="/auth">
-          <Auth />
-        </Route>
-        {user ? (
+        {!!user ? (
+          <Redirect from="/auth" to="/" />
+        ) : (
+          <Route path="/auth">
+            <Auth />
+          </Route>
+        )}
+        {!!user ? (
           <Route path="/secret">
             <Secret />
           </Route>
         ) : (
-          <Redirect from="/secret" to="/">
-            <Home />
-          </Redirect>
+          <Redirect from="/secret" to="/" />
         )}
         <Route>
           <NotFound />
