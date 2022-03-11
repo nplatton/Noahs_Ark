@@ -31,7 +31,6 @@ export default ({ token, setToken }) => {
 
   function handleScrollUp(e) {
     if (tab > 0) {
-      // if (!e.)
       e.target.parentNode.parentNode.style.setProperty("--i", tab - 1);
       setTab((prev) => prev - 1);
     }
@@ -45,7 +44,7 @@ export default ({ token, setToken }) => {
   }
 
   return (
-    <>
+    <div id="about-main">
       <div id="about-outer">
         <div id="about-inner">
           <div className="about-tab">
@@ -80,7 +79,7 @@ export default ({ token, setToken }) => {
                 id="childhood-img"
                 src="../../images/childhood.jpg"
                 alt="Photo of Noah as a young lad"
-                width="35%"
+                width="25%"
               />
             </div>
             <div onMouseLeave={handleScrollDown} className="scroll-down">
@@ -96,7 +95,7 @@ export default ({ token, setToken }) => {
                 id="climbing-img"
                 src="../../images/home_picture_3.jpg"
                 alt="Photo of Noah holding 2 bouldering pads"
-                width="35%"
+                width="25%"
               />
               <aside className="about-aside">
                 <h2>Coding comes second...</h2>
@@ -163,7 +162,7 @@ export default ({ token, setToken }) => {
                 id="uni-img"
                 src="../../images/uni_resized.jpg"
                 alt="Photo of Noah at university"
-                width="35%"
+                width="25%"
               />
             </div>
             <div onMouseLeave={handleScrollDown} className="scroll-down">
@@ -179,7 +178,7 @@ export default ({ token, setToken }) => {
                 id="travelling-img"
                 src="../../images/travelling_2.jpg"
                 alt="Photo of Noah in Singapore"
-                width="35%"
+                width="25%"
               />
               <aside className="about-aside">
                 <h2>With my huge nose I blend right in</h2>
@@ -204,6 +203,6 @@ export default ({ token, setToken }) => {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };
