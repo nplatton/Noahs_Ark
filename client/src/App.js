@@ -1,35 +1,46 @@
-import React, { useLayoutEffect, useState } from "react";
+import React from "react";
 import { Switch, Route } from "react-router-dom";
 
-import { Home, About, Auth, Projects } from "./pages";
+import { Home, About, Auth, Projects, Secret, NotFound } from "./pages";
 import { Header, Footer } from "./layout";
 
 import "./App.css";
+import { useAuthContext } from "./contexts/Auth";
+import { Redirect } from "react-router-dom";
 
 const App = () => {
-  const [token, setToken] = useState();
-  useLayoutEffect(() => {
-    if (localStorage.getItem("token")) {
-      setToken(localStorage.getItem("token"));
-    }
-  }, [token]);
+  const { user } = useAuthContext();
 
   return (
     <>
-      <Header token={token} setToken={setToken} />
+      <Header />
       <Switch>
         <Route exact path="/">
-          <Home token={token} setToken={setToken} />
+          <Home />
         </Route>
-        <Route exact path="/about">
-          <About token={token} setToken={setToken} />
+        <Route path="/about">
+          <About />
         </Route>
-        <Route exact path="/projects">
-          <Projects token={token} setToken={setToken} />
+        <Route path="/projects">
+          <Projects />
         </Route>
-        {/* <Route exact path="/auth">
-          <Auth token={token} setToken={setToken} />
-        </Route> */}
+        {!!user ? (
+          <Redirect from="/auth" to="/" />
+        ) : (
+          <Route path="/auth">
+            <Auth />
+          </Route>
+        )}
+        {!!user ? (
+          <Route path="/secret">
+            <Secret />
+          </Route>
+        ) : (
+          <Redirect from="/secret" to="/" />
+        )}
+        <Route>
+          <NotFound />
+        </Route>
       </Switch>
       {/* <Footer /> */}
     </>

@@ -27,7 +27,7 @@
   padding-top: 0.8em;
   text-align: center;
   font-weight: bold;
-  background-color: rgba(31, 31, 31, 0.05);
+  background-color: rgba(31, 31, 31, 0.1);
   pointer-events: auto;
 }
 
@@ -42,7 +42,7 @@
   padding-top: 0.8em;
   text-align: center;
   font-weight: bold;
-  background-color: rgba(31, 31, 31, 0.05);
+  background-color: rgba(31, 31, 31, 0.1);
   pointer-events: auto;
 }
 

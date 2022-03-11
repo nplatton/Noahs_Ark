@@ -1,12 +1,15 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { NavLink } from "react-router-dom";
+import { useAuthContext } from "../../contexts/Auth";
 
 import "./style.css";
 
-export default ({ token, setToken }) => {
+export default () => {
+  const { user, setUser } = useAuthContext();
+
   function handleLogout() {
     localStorage.clear();
-    setToken(undefined);
+    setUser(null);
   }
 
   return (
@@ -29,11 +32,24 @@ export default ({ token, setToken }) => {
           className="nav-item"
           activeClassName="active"
         >
-          Projects
+          Arkives
         </NavLink>
+        {user ? (
+          <NavLink
+            exact
+            to="/secret"
+            className="nav-item"
+            activeClassName="active"
+          >
+            Secret
+          </NavLink>
+        ) : (
+          <></>
+        )}
       </div>
-      {/* <div className="nav-div">
-        {!token ? (
+
+      <div className="nav-div">
+        {!user ? (
           <>
             <NavLink
               exact
@@ -46,17 +62,12 @@ export default ({ token, setToken }) => {
           </>
         ) : (
           <>
-            <NavLink
-              onClick={handleLogout}
-              to="/"
-              className="nav-item"
-              activeClassName="active"
-            >
+            <NavLink onClick={handleLogout} to="/" className="nav-item">
               Logout
             </NavLink>
           </>
         )}
-      </div> */}
+      </div>
     </nav>
   );
 };

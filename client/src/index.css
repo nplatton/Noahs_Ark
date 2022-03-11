@@ -2,6 +2,11 @@ body {
   box-sizing: border-box;
   background-color: ivory;
   color: rgb(31, 31, 31);
-  overflow: hidden;
   font-family: "David Libre", serif;
+  overflow: scroll;
+}
+
+img {
+  text-align: center;
+  max-height: 350px;
 }
