@@ -6,7 +6,12 @@ export default () => {
   return (
     <>
       <div id="temp">
-        <h1>Coming Soon ...</h1>
+        <div className=""></div>
+        <div className=""></div>
+        <div className=""></div>
+        <div className=""></div>
+        <div className=""></div>
+        <div className=""></div>
       </div>
     </>
   );
