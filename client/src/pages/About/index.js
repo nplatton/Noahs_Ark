@@ -221,6 +221,6 @@ export default ({ token, setToken }) => {
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
