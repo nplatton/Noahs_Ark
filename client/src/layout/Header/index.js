@@ -47,6 +47,7 @@ export default () => {
           <></>
         )}
       </div>
+
       <div className="nav-div">
         {!user ? (
           <>
