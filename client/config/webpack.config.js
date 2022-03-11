@@ -1,7 +1,8 @@
 const path = require("path");
-const HtmlWebpackPlugin = require("html-webpack-plugin");
 const Dotenv = require("dotenv-webpack");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
+const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 
 const ROOT_DIR = path.join(__dirname, "../");
 const PUB_DIR = path.join(ROOT_DIR, "public");
@@ -12,7 +13,7 @@ const config = {
     path: path.resolve(ROOT_DIR, "./dist"),
     filename: "bundle.js",
     publicPath: "/",
-    clean: true,
+    // clean: true,
   },
   mode: "development",
   resolve: {
@@ -22,6 +23,7 @@ const config = {
     hints: false,
   },
   plugins: [
+    new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
       template: path.join(PUB_DIR, "index.html"),
     }),
