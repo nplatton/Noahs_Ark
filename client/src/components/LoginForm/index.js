@@ -41,7 +41,7 @@ export default () => {
 
   return (
     <>
-      <form onSubmit={handleSubmission}>
+      <form role="form" id="login-form" onSubmit={handleSubmission}>
         <div className="field">
           <label htmlFor="username">Username/email</label>
           <input

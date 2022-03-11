@@ -12,6 +12,7 @@ const config = {
     path: path.resolve(ROOT_DIR, "./dist"),
     filename: "bundle.js",
     publicPath: "/",
+    clean: true,
   },
   mode: "development",
   resolve: {
