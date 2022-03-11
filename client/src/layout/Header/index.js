@@ -48,7 +48,7 @@ export default () => {
         )}
       </div>
 
-      {/* <div className="nav-div">
+      <div className="nav-div">
         {!user ? (
           <>
             <NavLink
@@ -60,14 +60,14 @@ export default () => {
               Login / Register
             </NavLink>
           </>
-        ) : ( 
+        ) : (
           <>
             <NavLink onClick={handleLogout} to="/" className="nav-item">
               Logout
             </NavLink>
           </>
         )}
-      </div> */}
+      </div>
     </nav>
   );
 };
